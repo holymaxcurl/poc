@@ -233,7 +233,7 @@ preinstall_l2tp(){
 
     password=`rand`
 
-    echo ${iprange},${mypsk},${username},${password}
+    echo ${iprange},${mypsk},${username},${password} > vpn.txt
 
     echo
     echo "ServerIP:${IP}"
